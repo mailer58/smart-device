@@ -9,5 +9,4 @@ package-lock.json
 *.sublime*
 node_modules/
 npm-debug.*
-build/
 Thumbs.db
