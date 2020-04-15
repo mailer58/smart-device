@@ -1,17 +1,278 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Smart Device - умные технологии</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Device - умные технологии</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/vendor.js" async></script>
+</head>
 
-  <body>
-    <div style="display:none">
-      <include src="build/img/sprite_auto.svg"></include>
+<body>
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo-container">
+        <a class="page-header__logo-link">
+          <svg class="page-header__logo-desktop" width="201" height="52">
+            <use xlink:href="#logo-desktop"></use>
+          </svg>
+          <svg class="page-header__logo-mobile" width="38" height="38">
+            <use xlink:href="#logo-mobile"></use>
+          </svg>
+        </a>
+      </div>
+
+      <address class="page-header__contacts">
+        <a class="page-header__email" href="mailto:info@sd.ru">
+          <span class="page-header__email-address">info@sd.ru</span>
+        </a>
+        <a class="page-header__phone" href="#">
+          <span class="page-header__phone-number">+7 (495) 000 52 52</span>
+        </a>
+        <a class="page-header__call-order button-templet">Заказать звонок</a>
+      </address>
     </div>
+
+    <div class="page-header__promo">
+      <div class="page-header__text">
+        <h1 class="page-header__title">Печатные платы</h1>
+        <p class="page-header__description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="page-header__consultation button-templet">
+          <span class="page-header__consultation-desktop">Получить бесплатную консультацию</span>
+          <span class="page-header__consultation-mobile">Бесплатная консультация</span></a>
+
+        </a>
+        <a class="page-header__scroll">Скролл вниз</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="info">
+      <h2 class="visually-hidden">Информация о компании</h2>
+      <div class="info__wrapper">
+        <ul class="info__list">
+          <li class="info__item">
+            <svg class="info__icon" width="29" height="35">
+              <use xlink:href="#icon-clock"></use>
+            </svg>
+            <h2 class="info__title">Оперативные сроки</h2>
+            <p class="info__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
+              производить и доставлять заказы плат и комплектующих в самые короткие сроки
+            </p>
+          </li>
+          <li class="info__item">
+            <svg class="info__icon" width="35" height="35">
+              <use xlink:href="#icon-providers"></use>
+            </svg>
+            <h2 class="info__title">Крупные поставщики</h2>
+            <p class="info__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE,
+              HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+            </p>
+          </li>
+          <li class="info__item">
+            <svg class="info__icon" width="35" height="35">
+              <use xlink:href="#icon-detective"></use>
+            </svg>
+            <h2 class="info__title">Полная конфиденциальность</h2>
+            <p class="info__text">По желанию клиента мы обеспечиваем полную конфиденциальность.
+            </p>
+          </li>
+          <li class="info__item">
+            <svg class="info__icon" width="35" height="35">
+              <use xlink:href="#icon-price"></use>
+            </svg>
+            <h2 class="info__title">Персонализация стоимости</h2>
+            <p class="info__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту
+              цену, которая Вас устраивает.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="info__container">
+        <div class="info__subcontainer">
+          <h2 class="info__about-title">О компании</h2>
+          <p class="info__description">Мы поставляем электронные комплектующие, производим печатные платы и
+            предоставляем
+            мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          </p>
+          <p class="info__description">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+            <span class="info__description-mobile">..</span>
+            <span class="info__description-desktop">(РЖД),
+              РоссАвтоПрома
+              (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники
+              России.
+            </span>
+          </p>
+          <a class="info__button button-templet">Подробнее</a>
+        </div>
+      </div>
+    </section>
+    <section class="offers">
+      <div class="offers__wrapper">
+        <h2 class="offers__title">Service Device предлагает следующие товары и услуги</h2>
+        <ul class="offers__list">
+          <li class="offers__item offers__item--production">
+            <a class="offers__link" href="#">
+              <p class="offers__text">Производство печатных плат</p>
+            </a>
+          </li>
+          <li class="offers__item offers__item--mount">
+            <a class="offers__link" href="#">
+              <p class="offers__text">Монтаж печатных плат</p>
+            </a>
+          </li>
+          <li class="offers__item offers__item--lighting">
+            <a class="offers__link" href="#">
+              <p class="offers__text offers__text--lighting">Комплектующие для светотехники</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="question">
+      <div class="question__container">
+        <div class="question__wrapper">
+          <h2 class="question__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="question__text">Мы проконсультируем Вас бесплатно</p>
+          <form class="question__form" method="post" action="#">
+            <fieldset class="question__user-data">
+              <div class="question__user-inputs-wrapper">
+                <label class="visually-hidden" for="name"></label>
+                <input class="question__user-name" id="name" name="name" type="text" placeholder="Имя" required>
+                <input class="question__phone" id="phone" name="phone" type="tel"
+                  pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Телефон" required>
+              </div>
+            </fieldset>
+            <fieldset class="question__user-question">
+              <label class="visually-hidden" for="question"></label>
+              <textarea class="question__textarea" id="question" name="question" placeholder="Ваш вопрос"
+                required></textarea>
+            </fieldset>
+            <div class="question__submit">
+              <button class="question__button button-templet" type="submit">Задать вопрос</button>
+              <input type="checkbox" name="question__checkbox" value="agreement" id="agreement"
+                class="visually-hidden question__agreement-checkbox" checked="">
+              <label class="question__agreement-label" for="agreement">Я согласен на обработку персональных
+                данных</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__left-block">
+        <svg class="page-footer__logo" width="215" height="52">
+          <use xlink:href="#logo-service"></use>
+        </svg>
+        <p class="page__footer-service">1999-2018 SD Service Devices</p>
+        <ul class="page-footer__social-list social">
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Мы в Фейсбуке" target="_blank">
+              <svg class="social__icon" width="27" height="27">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Мы в Одноклассниках" target="_blank">
+              <svg class="social__icon" width="27" height="27">
+                <use xlink:href="#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" aria-label="Мы во Вконтакте" target="_blank">
+              <svg class="social__icon" width="27" height="27">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__central-right-blocks-wrapper">
+        <div class="page-footer__central-block">
+          <div class="page-footer__central-block-wrapper">
+            <h2 class="page-footer__header">Разделы сайта</h2>
+            <a class="page-footer__plus-button" id="sections-button" aria-label="Показать разделы сайта"></a>
+          </div>
+          <ul class="page-footer__sections" id="sections">
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                О компании</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                Продукты</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link page-footer__section-link--padding" href="#">
+                Производство печатных плат</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                Монтаж печатных плат</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                Комплектующие</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                Доставка</a>
+            </li>
+            <li class="page-footer__sections-item">
+              <a class="page-footer__section-link" href="#">
+                Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__right-block">
+          <div class="page-footer__right-block-wrapper">
+            <h2 class="page-footer__header">Наш офис</h2>
+            <a class="page-footer__minus-button" id="contacts-button" aria-label="Показать разделы сайта"></a>
+          </div>
+          <ul class="page-footer__contact-list opened" id="contacts">
+            <li class="page-footer__address">
+              <a class="page-footer__address-link">г. Мытищи, Олимпийский проспект, д.10</a>
+            </li>
+            <li class="page-footer__phone">
+              <a class="page-footer__phone-link" href="#">+7 (495) 589-40-50</a>
+            </li>
+            <li class="page-footer__phone">
+              <a class="page-footer__phone-link" href="#">+7 (925) 003-87-67</a>
+            </li>
+            <li class="page-footer__phone">
+              <a class="page-footer__phone-link" href="#">+7 (926) 926-080-79</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer__bottom-block">
+      <div class="page-footer__bottom-block-wrapper">
+        <p class="page-footer__bottom-text page-footer__bottom-text--confidentiality">Все права защищены</p>
+        <p class="page-footer__bottom-text page-footer__bottom-text--service">1999-2018 SD Service Devices</p>
+        <p class="page-footer__bottom-text">
+          <a class="page-footer__confidentiality" href="#">Условия конфиденциальности</a>
+        </p>
+        <p class="page-footer__bottom-text">Developed by wow studio</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

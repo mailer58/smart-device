@@ -7,10 +7,12 @@
   },
   "homepage": "https://github.com/mailer58/smart-device#readme",
   "devDependencies": {
-    "gulp": "4.0.2",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
+    "gulp": "^4.0.2",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "1.2.x",
@@ -21,12 +23,12 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
+    "html-validator": "^5.1.7",
+    "html-validator-cli": "^7.0.0",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -36,7 +38,8 @@
     "start": "gulp start",
     "webp": "gulp webp",
     "sprite": "gulp sprite",
-    "eslint": "eslint"
+    "eslint": "eslint",
+    "html": "html-validator-cli --file"
   },
   "browserslist": [
     "last 2 versions",

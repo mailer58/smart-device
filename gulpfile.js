@@ -39,8 +39,13 @@ gulp.task('server', function () {
   });
 
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
+  gulp.watch('source/sass/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
+  gulp.watch('source/img/logo-*.svg', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('source/img/*.jpg', gulp.series('copy', 'refresh'));
+  gulp.watch('source/img/*.png', gulp.series('copy', 'refresh'));
+  gulp.watch('source/js/scripts.js', gulp.series('js', 'refresh'));
 });
 
 gulp.task('refresh', function (done) {
@@ -67,7 +72,9 @@ gulp.task('webp', function () {
 });
 
 gulp.task('sprite', function () {
-  return gulp.src('source/img/logo*.svg')
+  return gulp.src(['source/img/logo*.svg',
+    'source/img/icon*.svg', 'source/img/logo-mobile.svg'
+  ])
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite_auto.svg'))
       .pipe(gulp.dest('build/img'));
@@ -81,12 +88,20 @@ gulp.task('html', function () {
       .pipe(gulp.dest('build'));
 });
 
+gulp.task('js', function () {
+  return gulp.src('source/js/*.js',
+      {
+        base: 'source'
+      })
+      .pipe(gulp.dest('build'));
+});
+
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source/js/**',
-    'source//*.ico'
+    'source/*.ico'
   ], {
     base: 'source'
   })

@@ -1,0 +1,23 @@
+.social {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  width: 112px;
+  padding-top: 31px;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-top: 0;
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .social {
+    padding-top: 8px;
+    margin-right: 104px;
+  }
+
+}
