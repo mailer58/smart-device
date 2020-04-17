@@ -73,10 +73,10 @@ var alignElements = function () {
     svgShift = svgInitPos + diff;
     svgShift = svgShift + 'px';
 
-    promoWrapper.style.background = 'url("../img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("../img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
+    promoWrapper.style.background = 'url("img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
 
   } else {
-    promoWrapper.style.background = 'url("../img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("../img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
+    promoWrapper.style.background = 'url("img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
   }
 };
 
