@@ -1,13 +1,13 @@
 .question {
   background-color: $blue;
-  padding-top: 12px;
-  padding-bottom: 28px;
+  padding-top: 31px;
+  padding-bottom: 42px;
 }
 
 .question__container {
   max-width: 100%;
   margin: 0 auto;
-  padding: $mobile-padding;
+  padding: 0 $mobile-padding;
 }
 
 .question__wrapper {
@@ -74,7 +74,7 @@
   height: 104px;
   resize: none;
   margin-bottom: 31px;
-  padding-top: 10px;
+  padding-top: 17px;
 }
 
 .question__button {
@@ -97,7 +97,7 @@
   width: 230px;
   font-size: 14px;
   line-height: 16px;
-  padding-top: 30px;
+  padding-top: 35px;
   padding-left: 30px;
   cursor: pointer;
 }
@@ -120,7 +120,7 @@
   height: 6px;
   left: 5px;
   top: 37px;
-  background-image: url("../../img/checkmark.svg");
+  background-image: url("../img/checkmark.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -129,8 +129,8 @@
 @media (min-width: $tablet-width) {
 
   .question {
-    padding-top: 62px;
-    padding-bottom: 90px;
+    padding-top: 78px;
+    padding-bottom: 103px;
   }
 
   .question__container {
@@ -169,7 +169,8 @@
 
   .question__textarea {
       width: 100%;
-      margin-bottom: 103px;
+      height: 164px;
+      margin-bottom: 46px;
   }
 
   .question__user-data {
@@ -187,7 +188,9 @@
 
   .question__agreement-label {
       padding-top: 0;
+      padding-left: 0;
       margin-top: 9px;
+      margin-left: 0;
   }
 
   .question__agreement-checkbox+label::before {
@@ -206,21 +209,21 @@
 
   .question {
     padding-top: 74px;
-    padding-bottom: 98px;
-    background-image: url("../../img/triangles-right.svg");
+    padding-bottom: 113px;
+    background-image: url("../img/triangles-right.svg");
     background-repeat: no-repeat;
     background-position: 1581px 95px;
   }
 
   .question__container {
-    max-width: $main-width;
+    max-width: $main-content-width;
     margin: 0 auto;
   }
 
   .question__wrapper {
     max-width: $form-width;
     margin-left: auto;
-    margin-right: $page-padding;
+    margin-right: $desktop-padding;
     position: relative;
 
     &::before {
@@ -229,7 +232,7 @@
       height: 288px;
       top: 73px;
       left: -625px;
-      background-image: url("../../img/airplane@1x-desktop.png");
+      background-image: url("../img/airplane@1x-desktop.png");
       background-repeat: no-repeat;
       z-index: 1000;
     }
@@ -240,7 +243,7 @@
       height: 487px;
       top: 4px;
       left: -775px;
-      background-image: url("../../img/triangles-left.svg");
+      background-image: url("../img/triangles-left.svg");
       background-repeat: no-repeat;
       z-index: 0;
     }
@@ -312,5 +315,13 @@
 
   .question__agreement-label {
     margin-top: 9;
+    padding-left: 0;
 }
+}
+
+@media (min-width: 1221px) {
+  .question__wrapper {
+  margin-right: 0;
+  }
+
 }

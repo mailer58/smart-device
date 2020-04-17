@@ -4,8 +4,7 @@
 }
 
 .info__wrapper {
-  margin: 32 auto 58px auto;
-  padding-top: 35px;
+  padding-top: 41px;
 }
 
 .info__list {
@@ -30,13 +29,13 @@
 
   li:last-child {
     padding-right: 16px;
-    margin-bottom: 58px;
+    margin-bottom: 61px;
   }
 }
 
 .info__item {
   position: relative;
-  padding-right: 14px;
+  padding-right: 10px;
   padding-left: 24px;
   margin-bottom: 22px;
   padding-bottom: 24px;
@@ -90,7 +89,7 @@
   font-weight: normal;
   font-size: 28px;
   line-height: 39px;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
 }
 
 .info__text {
@@ -109,7 +108,7 @@
   }
 
   p:last-of-type {
-    margin-bottom: 28px;
+    margin-bottom: 31px;
   }
 }
 
@@ -139,14 +138,15 @@
 
 @media (min-width: $tablet-width) {
   .info {
-    padding: 0 $page-padding;
-    background-image: url("../../img/triangles.svg");
+    padding: 0 $desktop-padding;
+    background-image: url("../img/triangles.svg");
     background-repeat: no-repeat;
     background-position: -348px -52px;
     margin-bottom: 82px;
   }
 
   .info__wrapper {
+    padding-top: 0;
     margin-bottom: 32px;
   }
 
@@ -216,7 +216,7 @@
 
     &::before {
       @include pseudo;
-      background-image: url("../../img/2005@1x-tablet.png");
+      background-image: url("../img/2005@1x-tablet.png");
       background-repeat: no-repeat;
       top: -1px;
       left: -210px;
@@ -225,7 +225,7 @@
 
       @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-        background-image: url("../../img/2005@2x-tablet.png");
+        background-image: url("../img/2005@2x-tablet.png");
         background-size: 244px auto;
       }
     }
@@ -243,22 +243,34 @@
 
   .info {
     background-position: -228px 44px;
+    margin-bottom: 0;
   }
 
   .info__wrapper {
-    max-width: $main-width;
+    max-width: 1170px;
     margin: 0 auto;
+    padding-top: 0;
   }
 
   .info__list {
     padding-top: 112px;
+
+    li:nth-of-type(1),
+    li:nth-of-type(2) {
+      margin-bottom: 22px;
+    }
+
+    li:last-child svg:nth-of-type(1), 
+    li:nth-last-child(2) svg:nth-of-type(1) {
+      margin-top: 40px;
+  }
   }
 
   .info__item {
     padding-right: 44px;
     padding-left: 40px;
     padding-bottom: 0;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     width: calc(50% - 15px);
     min-height: 299px;
     border-top: 1px solid rgb(235, 235, 235);
@@ -269,8 +281,8 @@
   }
 
   .info__icon {
-    margin-bottom: 14px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 36px;
   }
 
 
@@ -283,21 +295,22 @@
   }
 
   .info__container {
-    margin: 72px $page-padding 88px 198px;
+    padding-top: 89px;
+    margin-bottom: 110px;
     z-index: 0;
   }
 
   .info__subcontainer {
-    margin-right: auto;
-    max-width: 801px;
-    margin-left: 0;
+    margin: 0 $desktop-padding 0 180px;
+    width: 800px;
+    max-width: $main-content-width;
 
     p:nth-of-type(1) {
       margin-bottom: 20px;
     }
 
     p:last-of-type {
-      margin-bottom: 16px;
+      margin-bottom: 42px;
     }
   }
 
@@ -316,16 +329,16 @@
 
     &::before {
       @include pseudo;
-      background-image: url("../../img/2005@1x-desktop.png");
+      background-image: url("../img/2005@1x-desktop.png");
       background-repeat: no-repeat;
       top: 6px;
-      left: -211px;
+      left: -216px;
       width: 190px;
       height: 317px;
 
       @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-        background-image: url("../../img/2005@2x-desktop.png");
+        background-image: url("../img/2005@2x-desktop.png");
         background-size: 190px auto;
       }
     }
@@ -335,6 +348,7 @@
     margin: 0;
     padding: 0;
     max-width: 970px;
+    width: 800px;
   }
 
 
@@ -354,11 +368,16 @@
     width: 182px;
     padding: 14px 10px;
   }
+
+  .info__description-mobile {
+    display: none;
+  }
 }
 
-/* @media (min-width: $main-width) {
+@media (min-width: 1221px) {
   .info__subcontainer {
-    min-width: 987px;
+    width: $main-content-width;
     margin: 0 auto;
+    padding-left: 207px;
   }
-} */
+}

@@ -9,15 +9,17 @@
 @media (min-width: $tablet-width) {
   .social {
     margin-top: 0;
-    padding-top: 16px;
+    padding-top: 6px;
+    margin-bottom: 78x;
   }
 }
 
 @media (min-width: $desktop-width) {
 
   .social {
-    padding-top: 8px;
     margin-right: 104px;
+    margin-top: 20px;
+    padding-top: 0;
   }
 
 }

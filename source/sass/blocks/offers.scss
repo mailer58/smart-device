@@ -54,7 +54,7 @@
     bottom: 0;
     right: 0px;
     background-color: $blue;
-    background-image: url("../../img/right-arrow.svg");
+    background-image: url("../img/right-arrow.svg");
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -80,38 +80,38 @@
 }
 
 .offers__item--production {
-  background-image: url("../../img/circuits-production@1x-mobile.png");
+  background-image: url("../img/circuits-production@1x-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-    background-image: url("../../img/circuits-production@2x-mobile.png");
+    background-image: url("../img/circuits-production@2x-mobile.png");
     background-size: cover;
   }
 }
 
 .offers__item--mount {
-  background-image: url("../../img/circuits-mount@1x-mobile.png");
+  background-image: url("../img/circuits-mount@1x-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-    background-image: url("../../img/circuits-mount@2x-mobile.png");
+    background-image: url("../img/circuits-mount@2x-mobile.png");
     background-size: cover;
   }
 }
 
 .offers__item--lighting {
-  background-image: url("../../img/lighting@1x-mobile.png");
+  background-image: url("../img/lighting@1x-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
-    background-image: url("../../img/lighting@2x-mobile.png");
+    background-image: url("../img/lighting@2x-mobile.png");
     background-size: cover;
   }
 }
@@ -121,7 +121,7 @@
   .offers {
     margin: 0;
     padding-top: 49px;
-    padding-bottom: 82px;
+    padding-bottom: 83px;
   }
 
   .offers__wrapper {
@@ -143,37 +143,37 @@
   }
 
   .offers__item--production {
-    background-image: url("../../img/circuits-production@1x-tablet.png");
+    background-image: url("../img/circuits-production@1x-tablet.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/circuits-production@2x-tablet.png");
+      background-image: url("../img/circuits-production@2x-tablet.png");
       background-size: cover;
     }
   }
 
   .offers__item--mount {
-    background-image: url("../../img/circuits-mount@1x-tablet.png");
+    background-image: url("../img/circuits-mount@1x-tablet.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/circuits-mount@2x-tablet.png");
+      background-image: url("../img/circuits-mount@2x-tablet.png");
       background-size: cover;
     }
   }
 
   .offers__item--lighting {
-    background-image: url("../../img/lighting@1x-tablet.png");
+    background-image: url("../img/lighting@1x-tablet.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/lighting@2x-tablet.png");
+      background-image: url("../img/lighting@2x-tablet.png");
       background-size: cover;
     }
   }
@@ -197,7 +197,7 @@
 @media (min-width: $desktop-width) {
 
   .offers {
-    padding: 86px $page-padding 127px $page-padding;
+    padding: 0 $desktop-padding 127px $desktop-padding;
   }
 
   .offers__wrapper {
@@ -208,6 +208,7 @@
   .offers__title {
     margin: 0;
     padding: 0;
+    padding-top: 93px;
     margin-bottom: 54px;
     font-size: 36px;
     line-height: 51px;
@@ -241,7 +242,7 @@
       bottom: 0;
       right: 0px;
       background-color: $blue;
-      background-image: url("../../img/right-arrow.svg");
+      background-image: url("../img/right-arrow.svg");
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -250,34 +251,34 @@
   }
 
   .offers__item--production {
-    background-image: url("../../img/circuits-production@1x-desktop.png");
+    background-image: url("../img/circuits-production@1x-desktop.png");
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/circuits-production@2x-desktop.png");
+      background-image: url("../img/circuits-production@2x-desktop.png");
       background-size: 370px auto;
     }
   }
 
   .offers__item--mount {
-    background-image: url("../../img/circuits-mount@1x-desktop.png");
+    background-image: url("../img/circuits-mount@1x-desktop.png");
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/circuits-mount@2x-desktop.png");
+      background-image: url("../img/circuits-mount@2x-desktop.png");
       background-size: 370px auto;
     }
   }
 
   .offers__item--lighting {
-    background-image: url("../../img/lighting@1x-desktop.png");
+    background-image: url("../img/lighting@1x-desktop.png");
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
-      background-image: url("../../img/lighting@2x-desktop.png");
+      background-image: url("../img/lighting@2x-desktop.png");
       background-size: 370px auto;
     }
   }
