@@ -155,7 +155,7 @@
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-top-tablet@2x.png");
-      background-size: 770px cover;
+      background-size: cover;
     }
   }
 
@@ -293,7 +293,7 @@
 
     &::before {
       @include pseudo;
-      top: 0px;
+      top: 0;
       left: -34px;
       width: 18px;
       height: 18px;

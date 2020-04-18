@@ -37,7 +37,7 @@
   position: relative;
   padding-right: 10px;
   padding-left: 24px;
-  margin-bottom: 22px;
+  margin-bottom: 38px;
   padding-bottom: 24px;
   width: 100%;
   min-height: 232px;
@@ -124,7 +124,6 @@
 
 .info__button {
   font: inherit;
-  border: 0 none;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -189,6 +188,7 @@
     width: 345px;
     min-height: 232px;
     padding-bottom: 5px;
+    margin-bottom: 22px;
   }
 
   .info__title {
