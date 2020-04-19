@@ -1,5 +1,6 @@
 body {
   min-width: 320px;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   color: $text-color;
@@ -9,4 +10,5 @@ body {
   font-style: normal;
   line-height: 22px;
   background-color: $white;
+  position: relative;
 }

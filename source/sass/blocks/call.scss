@@ -1,0 +1,146 @@
+.call {
+  padding: 29px 39px 38px 39px;
+  background-color: $blue;
+  margin: 0 auto;
+  width: 490px;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+}
+
+.call__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+  color: $white;
+  font-family: $roboto-condensed;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.call__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  color: $white;
+  width: 365px;
+}
+
+
+.call__user-data {
+  margin-bottom: 15px;
+}
+
+.call__user-name,
+.call__phone,
+.call__textarea {
+  display: block;
+  @include form-fields;
+  padding: 14px 24px;
+  width: 100%;
+  color: $white;
+
+  &::-webkit-input-placeholder {
+    color: $white
+  }
+
+  &::-moz-placeholder {
+    color: $white
+  }
+}
+
+.call__user-name,
+.call__phone {
+  margin-bottom: 33px;
+}
+
+.call__textarea {
+  height: 104px;
+  margin-bottom: 30px;
+  padding: 10px 24px;
+  resize: none;
+}
+
+.call__submit {
+  display: flex;
+  width: $form-width;
+  position: relative;
+}
+
+.call__button {
+  font: inherit;
+  width: 100%;
+  font-family: $roboto-condensed;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  padding: 11px 10px;
+  margin-right: 73px;
+  letter-spacing: 0.05em;
+}
+
+.call__agreement-label {
+  position: relative;
+  color: $white;
+  display: block;
+  width: 353px;
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 35px;
+  padding-left: 48px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.call__agreement-checkbox+label::before {
+  @include pseudo;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  left: -30px;
+  top: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  margin-left: 30px;
+}
+
+.call__agreement-checkbox:checked+label::after {
+  @include pseudo;
+  width: 9px;
+  height: 6px;
+  left: 4px;
+  top: 40px;
+  background-image: url("../img/checkmark.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.call__user-data {
+  @include fieldset-reset;
+}
+
+.call__user-question {
+  @include fieldset-reset;
+}
+
+.call__close-button {
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        width: 17px;
+        height: 17px;
+        right: -431px;
+        top: -61px;
+        background-image: url("../img/cross.svg");
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
