@@ -125,16 +125,12 @@ window.addEventListener('resize', function () {
     sections.style.display = display.FLEX;
     contacts.style.display = display.BLOCK;
   } else if (window.matchMedia('(max-width: 767px)').matches) {
-    var openedeBlock = document.getElementsByClassName('opened')[0];
-    if (openedeBlock) {
-      openedeBlock.classList.remove('opened');
-    }
-    sections.style.display = display.NONE;
-    contacts.style.display = display.NONE;
-
-    sectionsButton.style.backgroundImage = 'url("img/plus.svg")';
-    contactsButton.style.backgroundImage = 'url("img/plus.svg")';
-
+    var blocks = [sections, contacts];
+    blocks.forEach(function (block) {
+      if (!block.classList.contains('opened')) {
+        block.style.display = display.NONE;
+      }
+    });
   }
   if (window.matchMedia('(min-width: 1024px)').matches) {
     alignElements();
