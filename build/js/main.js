@@ -9,6 +9,11 @@ var display = {
   NONE: 'none'
 };
 
+var phone = {
+  MAIN: 'phone-main',
+  MODAL: 'phone-modal'
+};
+
 var sectionsButton = document.querySelector('#sections-button');
 var sections = document.querySelector('#sections');
 var contactsButton = document.querySelector('#contacts-button');
@@ -21,9 +26,11 @@ var consultationLink = document.querySelector('#consultation-link');
 var question = document.querySelector('.question__wrapper');
 var infoSection = document.querySelector('.info__item');
 var scrollButton = document.querySelector('.page-header__scroll');
+var phoneModal = document.querySelector('#phone-modal');
+var phoneMain = document.querySelector('#phone-main');
 
 /* ------------------------------------------------------------------ */
-// show/hide elements of site:
+// show/hide elements of footer:
 var toggleBlock = function (btn, block, displayMode) {
 
   var hideElements = function (element) {
@@ -129,7 +136,6 @@ window.addEventListener('resize', function () {
     contactsButton.style.backgroundImage = 'url("img/plus.svg")';
 
   }
-
   if (window.matchMedia('(min-width: 1024px)').matches) {
     alignElements();
   }
@@ -137,7 +143,7 @@ window.addEventListener('resize', function () {
 
 
 /* ------------------------------------------------------------------ */
-// show/close pop-up form:
+// show/close modal form:
 
 var onCloseButtonClick = function (evt) {
   evt.preventDefault();
@@ -222,6 +228,19 @@ scrollButton.addEventListener('click', smoothScrollToInfo);
 
 /* ------------------------------------------------------------------ */
 // phone mask:
-IMask(document.querySelector('#phone-number'), {mask: '+{7}(000)000-00-00'});
-IMask(document.querySelector('#phone'), {mask: '+{7}(000)000-00-00'});
+
+var phoneMainMask = IMask(phoneMain, {mask: '+{7}(000)000-00-00'});
+
+var phoneModalMask = IMask(phoneModal, {mask: '+{7}(000)000-00-00'});
+
+var onInputFocus = function (evt) {
+  var mask = evt.target.id === phone.MAIN ? phoneMainMask : phoneModalMask;
+  if (!evt.target.value) {
+    mask.value = '+7';
+  }
+};
+
+phoneMain.addEventListener('focus', onInputFocus);
+phoneModal.addEventListener('focus', onInputFocus);
+
 
