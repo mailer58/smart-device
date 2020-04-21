@@ -403,6 +403,10 @@
     transform: rotate(-90deg);
     width: 105px;
     cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .page-header-circuit {
