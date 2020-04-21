@@ -34,7 +34,6 @@ var questionText = document.querySelector('#question-text');
 var formModal = document.querySelector('.call__form');
 var userNameModal = document.querySelector('.call__user-name');
 var modalText = document.querySelector('.call__textarea');
-var sendButtonModal = document.querySelector('.call__button');
 
 /* ------------------------------------------------------------------ */
 // show/hide elements of footer:
@@ -233,7 +232,6 @@ callButton.addEventListener('click', function (evt) {
   document.addEventListener('keydown', onEscKeyDown);
   document.addEventListener('click', onOverlayClick);
 });
-
 
 
 /* ------------------------------------------------------------------ */
