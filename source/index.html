@@ -142,7 +142,7 @@
         <div class="question__wrapper">
           <h2 class="question__title">Остались вопросы? Задайте их нам!</h2>
           <p class="question__text">Мы проконсультируем Вас бесплатно</p>
-          <form class="question__form" method="post" action="#">
+          <form class="question__form" method="post" action="#" id="form">
             <fieldset class="question__user-data">
               <div class="question__user-inputs-wrapper">
                 <label class="visually-hidden" for="name"></label>
@@ -153,11 +153,11 @@
             </fieldset>
             <fieldset class="question__user-question">
               <label class="visually-hidden" for="question"></label>
-              <textarea class="question__textarea" id="question" name="question" placeholder="Ваш вопрос"
+              <textarea class="question__textarea" id="question-text" name="question" placeholder="Ваш вопрос"
                 required></textarea>
             </fieldset>
             <div class="question__submit">
-              <button class="question__button button-templet" type="submit">Задать вопрос</button>
+              <button class="question__button button-templet" type="submit" id="question-button">Задать вопрос</button>
               <input type="checkbox" name="question__checkbox" value="agreement" id="agreement"
                 class="visually-hidden question__agreement-checkbox" checked="">
               <label class="question__agreement-label" for="agreement">Я согласен на обработку персональных
@@ -174,7 +174,7 @@
         <svg class="page-footer__logo" width="215" height="52">
           <use xlink:href="#logo-service"></use>
         </svg>
-        <p class="page__footer-service">1999-2018 SD Service Devices</p>
+        <p class="page-footer__service">1999-2018 SD Service Devices</p>
         <ul class="page-footer__social-list social">
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Фейсбуке" target="_blank">

@@ -1,6 +1,8 @@
 .info {
   padding: 0 $mobile-padding;
   margin-bottom: 65px;
+  width: 100%;
+  flex-grow: 2;
 }
 
 .info__wrapper {
@@ -132,6 +134,11 @@
   border: 1px solid $blue;
   width: 182px;
   padding: 14px 10px;
+}
+
+.info__button:hover {
+  color: $white;
+  background-color: $blue;
 }
 
 
@@ -376,8 +383,19 @@
 
 @media (min-width: 1221px) {
   .info__subcontainer {
-    width: $main-content-width;
     margin: 0 auto;
-    padding-left: 207px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .info__description {
+    width: 955px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .info__description {
+    width: 979px;
   }
 }

@@ -2,6 +2,7 @@
   background-color: $blue;
   padding-top: 31px;
   padding-bottom: 42px;
+  width: 100%;
 }
 
 .question__container {
@@ -125,6 +126,18 @@
   cursor: pointer;
 }
 
+.question__button:hover {
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+  opacity: 0.7;
+}
+
+.question__agreement-label:hover {
+  color: $dark-blue;
+  opacity: 0.7;
+}
+
+
 
 @media (min-width: $tablet-width) {
 
@@ -142,7 +155,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
+  }
 
   .question__title {
     font-size: 32px;
@@ -151,7 +164,7 @@
   }
 
   .question__text {
-      margin-bottom: 52px;
+    margin-bottom: 52px;
   }
 
   .question__user-name,
@@ -164,33 +177,33 @@
   }
 
   .question__phone {
-      margin-bottom: 32px;
+    margin-bottom: 32px;
   }
 
   .question__textarea {
-      width: 100%;
-      height: 164px;
-      margin-bottom: 46px;
+    width: 100%;
+    height: 164px;
+    margin-bottom: 46px;
   }
 
   .question__user-data {
-      margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .question__submit {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .question__button {
-      width: 280px;
+    width: 280px;
   }
 
   .question__agreement-label {
-      padding-top: 0;
-      padding-left: 0;
-      margin-top: 9px;
-      margin-left: 0;
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 9px;
+    margin-left: 0;
   }
 
   .question__agreement-checkbox+label::before {
@@ -316,12 +329,12 @@
   .question__agreement-label {
     margin-top: 9;
     padding-left: 0;
-}
+  }
 }
 
 @media (min-width: 1221px) {
   .question__wrapper {
-  margin-right: 0;
+    margin-right: 0;
   }
 
 }

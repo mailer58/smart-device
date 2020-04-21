@@ -1,5 +1,4 @@
 .page-header {
-  margin: 0 auto;
   position: relative;
   min-height: 647px;
   background-image: url("../img/bg-top-mobile@1x.png");
@@ -125,6 +124,21 @@
 
 .page-header__scroll {
   display: none;
+}
+
+.page-header__email:hover,
+.page-header__phone:hover  {
+  color: $white;
+  opacity: 0.5;
+} 
+
+.page-header__call-order:hover {
+  background-color: $blue;
+  border: 1px solie $blue;
+}
+
+.page-header__consultation:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 503px) {

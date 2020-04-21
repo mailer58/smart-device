@@ -116,6 +116,10 @@
   }
 }
 
+.offers__item:hover:before {
+  background-color: transparent;
+}
+
 @media (min-width: $tablet-width) {
 
   .offers {

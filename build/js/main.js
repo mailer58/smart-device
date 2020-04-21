@@ -28,6 +28,13 @@ var infoSection = document.querySelector('.info__item');
 var scrollButton = document.querySelector('.page-header__scroll');
 var phoneModal = document.querySelector('#phone-modal');
 var phoneMain = document.querySelector('#phone-main');
+var form = document.querySelector('#form');
+var userName = document.querySelector('.question__user-name');
+var questionText = document.querySelector('#question-text');
+var formModal = document.querySelector('.call__form');
+var userNameModal = document.querySelector('.call__user-name');
+var modalText = document.querySelector('.call__textarea');
+var sendButtonModal = document.querySelector('.call__button');
 
 /* ------------------------------------------------------------------ */
 // show/hide elements of footer:
@@ -56,6 +63,7 @@ var toggleBlock = function (btn, block, displayMode) {
   if (block.classList.contains('opened')) {
     block.style.display = displayMode;
     btn.style.backgroundImage = 'url("img/minus.svg")';
+
   } else {
     block.style.display = display.NONE;
     btn.style.backgroundImage = 'url("img/plus.svg")';
@@ -137,7 +145,49 @@ window.addEventListener('resize', function () {
   }
 });
 
+/* ------------------------------------------------------------------ */
+// local storage:
 
+var isStorageSupport = true;
+var storageName = '';
+var storagePhone;
+var storageQuestionText;
+
+try {
+  storageName = localStorage.getItem('userName');
+  storagePhone = localStorage.getItem('phoneMain');
+  storageQuestionText = localStorage.getItem('questionText');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+form.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  if (isStorageSupport) {
+    localStorage.setItem('userName', userName.value);
+    localStorage.setItem('phoneMain', phoneMain.value);
+    localStorage.setItem('questionText', questionText.value);
+  }
+});
+
+formModal.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  if (isStorageSupport) {
+    localStorage.setItem('userName', userNameModal.value);
+    localStorage.setItem('phoneMain', phoneModal.value);
+    localStorage.setItem('questionText', modalText.value);
+  }
+  hideForm();
+});
+
+if (storageName) {
+  userName.value = storageName;
+  phoneMain.value = storagePhone;
+  questionText.value = storageQuestionText;
+  userNameModal.value = storageName;
+  phoneModal.value = storagePhone;
+  modalText.value = storageQuestionText;
+}
 /* ------------------------------------------------------------------ */
 // show/close modal form:
 
@@ -175,10 +225,16 @@ callButton.addEventListener('click', function (evt) {
   popupForm.style.display = display.BLOCK;
   document.body.classList.add('overflow-hidden');
 
+  if (!userNameModal.value) {
+    userNameModal.focus();
+  }
+
   closeButton.addEventListener('click', onCloseButtonClick);
   document.addEventListener('keydown', onEscKeyDown);
   document.addEventListener('click', onOverlayClick);
 });
+
+
 
 /* ------------------------------------------------------------------ */
 // scroll:
