@@ -31,17 +31,28 @@
   width: 72px;
 }
 
-.page-header__email {
+.page-header__mail-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-header__mail-link {
+  display: block;
+}
+
+.page-header__email-icon {
+  display: block;
+  margin-top: 8px;
   width: 26px;
   height: 19px;
   background-image: url("../img/icon-mailmobile.svg");
   background-repeat: no-repeat;
-  margin-top: 8px;
 }
 
-.page-header__email-address {
+.page-header__email-text {
   display: none;
 }
+
 
 .page-header__phone-number {
   display: none;
@@ -54,7 +65,6 @@
   margin-top: 5px;
   background-image: url("../img/icon-phonemobile.svg");
   background-repeat: no-repeat;
-
 }
 
 .page-header__call-order {
@@ -114,8 +124,9 @@
   line-height: 19px;
   width: 288px;
   margin: 0 auto;
-  padding: 18px 0;
+  padding: 17px 0;
   letter-spacing: 1px;
+  border: 1px solid $blue;
 }
 
 .page-header__consultation-desktop {
@@ -126,19 +137,22 @@
   display: none;
 }
 
-.page-header__email:hover,
-.page-header__phone:hover  {
+.page-header__mail-wrapper:hover,
+.page-header__phone:hover {
   color: $white;
   opacity: 0.5;
-} 
+}
 
 .page-header__call-order:hover {
   background-color: $blue;
-  border: 1px solie $blue;
+  border: 1px solid $blue;
 }
 
 .page-header__consultation:hover {
-  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+
 }
 
 @media (min-width: 503px) {
@@ -189,7 +203,7 @@
     width: 81px;
   }
 
-  .page-header__email {
+  .page-header__email-icon {
     margin-top: 17px;
   }
 
@@ -259,7 +273,7 @@
   }
 
   .page-header__logo-container {
-    width: 450px;
+    width: 410px;
   }
 
   .page-header__logo-desktop {
@@ -267,16 +281,18 @@
   }
 
   .page-header__contacts {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
-    width: 947px;
+    width: 960px;
     font-style: normal;
     line-height: 18px;
   }
 
-
-  .page-header__email {
-    margin-top: 52px;
+  .page-header__mail-wrapper {
+    margin-top: 50px;
+  }
+  .page-header__email-icon {
+    margin-top: 2px;
     line-height: 18px;
     color: $white;
     display: block;
@@ -285,9 +301,12 @@
     background-image: url("../img/icon-mail.svg");
   }
 
-  .page-header__email-address {
+  .page-header__email-text {
     display: inline-block;
-    margin-left: 40px;
+    color: $white;
+    margin-top: 0;
+    margin-left: 21px;
+
   }
 
   .page-header__phone {
@@ -295,6 +314,8 @@
     background-image: none;
     width: fit-content;
     height: fit-content;
+    margin-left: 122px;
+    margin-top: 50px;
   }
 
   .page-header__phone-number {
@@ -302,8 +323,6 @@
     position: relative;
     line-height: 18px;
     color: $white;
-    margin-top: 37px;
-    margin-left: 191px;
 
     &::before {
       @include pseudo;
@@ -328,6 +347,7 @@
     border-width: 1px;
     border-style: solid;
     margin-top: 39px;
+    margin-left: 49px;
     padding: 12px 24px;
     letter-spacing: 1px;
   }

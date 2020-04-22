@@ -7,6 +7,16 @@
   margin-bottom: 0;
 }
 
+.social__icon {
+  fill: rgb(205, 205, 205);
+}
+
+.social__icon--facebook:hover,
+.social__icon--ok:hover,
+.social__icon--vk:hover {
+  fill: $dark-blue;
+}
+
 @media (min-width: $tablet-width) {
   .social {
     margin-top: 6px;
@@ -23,5 +33,4 @@
     padding-top: 0;
     margin-bottom: 0;
   }
-
 }

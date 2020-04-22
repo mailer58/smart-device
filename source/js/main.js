@@ -34,25 +34,24 @@ var questionText = document.querySelector('#question-text');
 var formModal = document.querySelector('.call__form');
 var userNameModal = document.querySelector('.call__user-name');
 var modalText = document.querySelector('.call__textarea');
+var promoWrapper = document.querySelector('.page-header__promo-wrapper');
 
 /* ------------------------------------------------------------------ */
 // show/hide elements of footer:
 var toggleBlock = function (btn, block, displayMode) {
-
-  var hideElements = function (element) {
-    element.style.display = display.NONE;
-    element.classList.remove('opened');
-    var minusButtonId = element.id + '-button';
-    minusButtonId = document.getElementById(minusButtonId);
-    minusButtonId.style.backgroundImage = 'url("img/plus.svg")';
-  };
 
   var openedeBlocks = document.getElementsByClassName('opened');
   if (openedeBlocks.length) {
     var openedElements = Array.from(openedeBlocks);
     openedElements.forEach(function (element) {
       if (element.className !== block.className) {
-        hideElements(element);
+        element.style.display = display.NONE;
+        element.classList.remove('opened');
+        var button = element.id + '-button';
+        button = document.getElementById(button);
+
+        button.classList.remove('page-footer__minus-button');
+        button.classList.add('page-footer__plus-button');
       }
     });
   }
@@ -61,11 +60,13 @@ var toggleBlock = function (btn, block, displayMode) {
 
   if (block.classList.contains('opened')) {
     block.style.display = displayMode;
-    btn.style.backgroundImage = 'url("img/minus.svg")';
+    btn.classList.remove('page-footer__plus-button');
+    btn.classList.add('page-footer__minus-button');
 
   } else {
     block.style.display = display.NONE;
-    btn.style.backgroundImage = 'url("img/plus.svg")';
+    btn.classList.add('page-footer__plus-button');
+    btn.classList.remove('page-footer__minus-button');
   }
 };
 
@@ -86,7 +87,6 @@ var titleRightBorderInitPos = 764;
 
 
 var alignElements = function () {
-  var promoWrapper = document.querySelector('.page-header__promo-wrapper');
   var headerTitle = document.querySelector('.page-header__title');
   var titleRightBorder = headerTitle.getBoundingClientRect().right;
   var rasterShift = rasterInintPos;
@@ -118,7 +118,7 @@ var alignElements = function () {
 
     promoWrapper.style.background = 'url("img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
 
-  } else {
+  } else if (window.matchMedia('(min-width: 1024px)').matches) {
     promoWrapper.style.background = 'url("img/circuit@1x-desktop.png") ' + rasterShift + ' 171px no-repeat, url("img/triangles-top.svg") ' + svgShift + ' 186px no-repeat';
   }
 };
@@ -128,9 +128,15 @@ if (window.matchMedia('(min-width: 1024px)').matches) {
 }
 
 window.addEventListener('resize', function () {
+  if (window.matchMedia('(min-width: 320px)').matches) {
+    promoWrapper.style.background = 'url("../img/circuit@1x-mobile.png") 26px 31px no-repeat, url("../img/triangles-top-mobile.svg") 165px 8px no-repeat';
+  }
+
   if (window.matchMedia('(min-width: 768px)').matches) {
     sections.style.display = display.FLEX;
     contacts.style.display = display.BLOCK;
+    promoWrapper.style.background = 'url("../img/circuit@1x-tablet.png") 510px 41px no-repeat, url("../img/triangles-top-mobile.svg") 457px 11px no-repeat';
+
   } else if (window.matchMedia('(max-width: 767px)').matches) {
     var blocks = [sections, contacts];
     blocks.forEach(function (block) {
@@ -268,7 +274,7 @@ var smoothScrollTo = function () {
 };
 
 var questionPosition = question.getBoundingClientRect().top;
-var infoSectionPosition = infoSection.getBoundingClientRect().top;
+var infoSectionPosition = infoSection.getBoundingClientRect().top - 20;
 
 var smoothScrollToForm = smoothScrollTo().bind(null, questionPosition, 700);
 var smoothScrollToInfo = smoothScrollTo().bind(null, infoSectionPosition, 800);

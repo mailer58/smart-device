@@ -66,6 +66,12 @@
   }
 }
 
+.question__user-name:hover,
+  .question__phone:hover,
+  .question__textarea:hover {
+    outline: 1px solid $dark-blue-opacity;
+  }
+
 .question__user-name {
   margin-bottom: 32px;
 }
@@ -88,7 +94,7 @@
   background-color: transparent;
   border: 1px solid $white;
   padding: 14px 10px;
-  margin-right: 73px;
+  margin-bottom: 30px;
 }
 
 .question__agreement-label {
@@ -98,7 +104,7 @@
   width: 230px;
   font-size: 14px;
   line-height: 16px;
-  padding-top: 29px;
+  padding-top: 0;
   padding-left: 34px;
   cursor: pointer;
 }
@@ -108,11 +114,15 @@
   width: 17px;
   height: 16px;
   border: 1px solid $white;
-  left: -30px;
-  top: 32px;
+  left: 0px;
+  top: 2px;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 30px;
+}
+
+.question__agreement-checkbox:hover+label::before {
+  border: 1px solid $dark-blue-opacity-strong;
+
 }
 
 .question__agreement-checkbox:checked+label::after {
@@ -120,21 +130,27 @@
   width: 9px;
   height: 6px;
   left: 5px;
-  top: 37px;
+  top: 7px;
   background-image: url("../img/checkmark.svg");
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
+.question__agreement-checkbox:checked:hover+label::after {
+  background-image: url("../img/checkmarkhover.svg");
+}
+
 .question__button:hover {
-  color: $dark-blue;
-  border: 1px solid $dark-blue;
-  opacity: 0.7;
+  border: 1px solid $dark-blue-opacity;
 }
 
 .question__agreement-label:hover {
-  color: $dark-blue;
-  opacity: 0.7;
+  color: $dark-blue-opacity-strong;
+}
+
+.question__submit {
+  width: 290px;
+  margin: 0 auto;
 }
 
 
@@ -143,7 +159,7 @@
 
   .question {
     padding-top: 78px;
-    padding-bottom: 104px;
+    padding-bottom: 72px;
   }
 
   .question__container {
@@ -192,7 +208,10 @@
 
   .question__submit {
     display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .question__button {
@@ -201,19 +220,20 @@
 
   .question__agreement-label {
     padding-top: 0;
-    padding-left: 0;
+    padding-left: 36px;
     margin-top: 9px;
-    margin-left: 0;
+    margin-left: 42px;
+    width: 236px;
   }
 
   .question__agreement-checkbox+label::before {
-    left: -69px;
-    top: 1px;
+    left: 0px;
+    top: -1px;
   }
 
   .question__agreement-checkbox:checked+label::after {
-    left: -34px;
-    top: 6px;
+    left: 5px;
+    top: 4px;
   }
 
 }
@@ -222,7 +242,7 @@
 
   .question {
     padding-top: 90px;
-    padding-bottom: 113px;
+    padding-bottom: 82px;
     background-image: url("../img/triangles-right.svg");
     background-repeat: no-repeat;
     background-position: 1581px 95px;
@@ -286,7 +306,7 @@
   }
 
   .question__user-data {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 
   .question__user-name,
@@ -301,19 +321,17 @@
   .question__textarea {
     width: $form-width;
     height: 154px;
-    margin-bottom: 37px;
+    margin-bottom: 43px;
     padding-top: 10px;
   }
 
   .question__submit {
-    display: flex;
     width: $form-width;
     position: relative;
   }
 
   .question__button {
     width: 273px;
-    margin-right: 73px;
   }
 
   .question__agreement-checkbox+label::before {
@@ -321,15 +339,20 @@
     top: 1px;
   }
 
-  .question__agreement-checkbox:checked+label::after {
-    left: -29px;
-    top: 6px;
+  .question__agreement-label {
+    margin-left: 45px;
+    padding-left: 26px;
   }
 
-  .question__agreement-label {
-    margin-top: 9;
-    padding-left: 0;
+  .question__agreement-checkbox+label::before {
+   top: -1px;
+   left: -6px;
   }
+
+  .question__agreement-checkbox:checked+label::after {
+    top: 4px;
+    left: -1px;
+   }
 }
 
 @media (min-width: 1221px) {
