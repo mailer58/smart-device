@@ -153,7 +153,8 @@
 
   .info__wrapper {
     padding-top: 0;
-    margin-bottom: 32px;
+    margin: 0 auto 32px auto;
+    width: 718px;
   }
 
   .info__subcontainer {
@@ -254,6 +255,7 @@
   }
 
   .info__wrapper {
+    width: fit-content;
     max-width: 1170px;
     margin: 0 auto;
     padding-top: 0;

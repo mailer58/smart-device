@@ -32,7 +32,7 @@
 .offers__item {
   position: relative;
   display: block;
-  width: 290px;
+  width: 100%;
   background-position: top center;
   min-height: 256px;
   background-color: $dark-blue;
@@ -86,34 +86,36 @@
 .offers__item--production {
   background-image: url("../img/circuits-production@1x-mobile.png");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
     background-image: url("../img/circuits-production@2x-mobile.png");
-    background-size: 290px auto;
+    background-size: cover;
   }
 }
 
 .offers__item--mount {
   background-image: url("../img/circuits-mount@1x-mobile.png");
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
     background-image: url("../img/circuits-mount@2x-mobile.png");
-    background-size: 290px auto;
+    background-size: cover;
   }
 }
 
 .offers__item--lighting {
   background-image: url("../img/lighting@1x-mobile.png");
   background-repeat: no-repeat;
-
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
     background-image: url("../img/lighting@2x-mobile.png");
-    background-size: 290px auto;
+    background-size: cover;
   }
 }
 
@@ -140,40 +142,34 @@
 
   .offers__item {
     min-height: 256px;
-    width: 715px;
+    width: 100%;
     margin: 0 auto 45px auto;
   }
 
   .offers__item--production {
     background-image: url("../img/circuits-production@1x-tablet.png");
-    background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       background-image: url("../img/circuits-production@2x-tablet.png");
-      background-size: 715px auto;
     }
   }
 
   .offers__item--mount {
     background-image: url("../img/circuits-mount@1x-tablet.png");
-    background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       background-image: url("../img/circuits-mount@2x-tablet.png");
-      background-size: 715px auto;
     }
   }
 
   .offers__item--lighting {
     background-image: url("../img/lighting@1x-tablet.png");
-    background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
       background-image: url("../img/lighting@2x-tablet.png");
-      background-size: 715px auto;
     }
   }
 
