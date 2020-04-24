@@ -130,6 +130,8 @@
   line-height: 16px;
   font-weight: 700;
   color: $blue;
+  font-family: $roboto-condensed;
+  letter-spacing: 0.05em;
   background-color: $white;
   border: 1px solid $blue;
   width: 182px;
@@ -366,7 +368,6 @@
   }
 
   .info__button {
-    font: inherit;
     border: 0 none;
     font-size: 14px;
     line-height: 16px;

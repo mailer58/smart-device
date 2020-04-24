@@ -129,13 +129,13 @@ if (window.matchMedia('(min-width: 1024px)').matches) {
 
 window.addEventListener('resize', function () {
   if (window.matchMedia('(min-width: 320px)').matches) {
-    promoWrapper.style.background = 'url("../img/circuit@1x-mobile.png") 26px 31px no-repeat, url("../img/triangles-top-mobile.svg") 165px 8px no-repeat';
+    promoWrapper.style.background = 'url("img/circuit@1x-mobile.png") 26px 31px no-repeat, url("img/triangles-top-mobile.svg") 165px 8px no-repeat';
   }
 
   if (window.matchMedia('(min-width: 768px)').matches) {
     sections.style.display = display.FLEX;
     contacts.style.display = display.BLOCK;
-    promoWrapper.style.background = 'url("../img/circuit@1x-tablet.png") 510px 41px no-repeat, url("../img/triangles-top-mobile.svg") 457px 11px no-repeat';
+    promoWrapper.style.background = 'url("img/circuit@1x-tablet.png") 510px 41px no-repeat, url("img/triangles-top-mobile.svg") 457px 11px no-repeat';
 
   } else if (window.matchMedia('(max-width: 767px)').matches) {
     var blocks = [sections, contacts];
